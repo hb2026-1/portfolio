@@ -80,7 +80,8 @@ const Header = ({ url }) => {
         <Alerte text={t("Sign-outSuccessfully")} succ={"info"} />
       )}
 
-      <header className="flex jcsb aic">
+      <header className="cont flex jcsb aic">
+
         <div className=" containerflag flex">
           <img
             onClick={() => {
@@ -149,8 +150,9 @@ const Header = ({ url }) => {
               {location.pathname == "/about" && (
                 <li>
                   <a
+                  className="disabled"
                     onClick={() => {
-                      navigate("/articles");
+                      // navigate("/articles");
                     }}
                   >
                     {t("articles")}
@@ -182,8 +184,9 @@ const Header = ({ url }) => {
               {location.pathname == "/" && (
                 <li>
                   <a
+                  className="disabled"
                     onClick={() => {
-                      navigate("/articles");
+                      // navigate("/articles");
                     }}
                   >
                     {t("articles")}
@@ -268,6 +271,21 @@ const Header = ({ url }) => {
             </button>
           )}
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div className="modale" style={{ display: menu }}>
           <ul>

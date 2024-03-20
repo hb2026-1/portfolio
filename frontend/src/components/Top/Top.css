@@ -56,7 +56,7 @@ section .imge {
 .containeranni {
   width: 100%;
   height: 70vh;
-  
+ 
 }
 
 .reseaux {
@@ -205,7 +205,7 @@ transition: 0.8s !important;
   .containeranni {
     flex-direction: column;
     text-align: center;
-    height: 45vh;
+    height: 60vh;
     margin-top: 0;
   }
   .section h1 {
@@ -221,7 +221,7 @@ transition: 0.8s !important;
   .section {
     width: 98%;
     flex-direction: column;
-    height: 85vh;
+    height: 110vh;
   }
   section .containertop {
     width: 100%;

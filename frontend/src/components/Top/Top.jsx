@@ -219,6 +219,10 @@ const Top = () => {
       )}
 
       <section className="section flex jcsb">
+
+
+
+
         <div className="containertop">
           <div>
             <img
@@ -267,6 +271,22 @@ const Top = () => {
           )}
         </div>
        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div className="containeranni flex jcsb">
           <div className="reseaux flex aic">
             <div>
@@ -379,7 +399,7 @@ const Top = () => {
               onClick={() => {
                 if (isAuthenticated) {
                   window.open(
-                    "https://res.cloudinary.com/dtjpxlbkn/image/upload/f_auto,q_auto/v1/cv/mtb8vqe87lihl4jowlla",
+                    "https://res.cloudinary.com/dtjpxlbkn/image/upload/v1710894610/cv/jv6l5jtzcusu8l4tupli.png",
                     "_blank",
                     "noopener noreferrer"
                   );
@@ -419,7 +439,17 @@ const Top = () => {
               />
             </div>
           </motion.div>
+
+
         </div>
+
+
+
+
+
+
+
+
         <div
           className="containerbtncvmobile"
           onClick={() => {

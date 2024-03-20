@@ -211,6 +211,9 @@ header .icon-cross:hover {
 }
 header .containerflag {
   gap: 10px;
+
+  
+ 
 }
 header .flag {
   width: 25px;
@@ -219,6 +222,7 @@ header .flag {
   user-select: none;
   transition: 0.3s;
   border-radius: 50%;
+  
 }
 header .flag:hover {
   width: 30px;
@@ -227,9 +231,9 @@ header .flag:hover {
   border: 1px solid var(--blue);
   border-radius: 50%;
 }
-header .containerflag {
+/* header .containerflag {
   position: absolute;
-}
+} */
 header .logina {
   cursor: pointer;
 }
@@ -319,6 +323,7 @@ header .logina {
 
 .menuhumberger {
   width: 98%;
+  
 }
 
 .divvide {
@@ -329,6 +334,10 @@ header a.disabled {
   pointer-events: none;
   color: var(--disabled) !important;
   cursor: not-allowed !important;
+}
+.cont{
+  flex-direction: column-reverse;
+ 
 }
 
 @media (min-width: 701px) {
@@ -341,12 +350,7 @@ header a.disabled {
 }
 
 @media (max-width: 700px) {
-  header .containerflag {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+ 
   header .flag {
     width: 25px;
     height: 25px;
@@ -388,6 +392,9 @@ header a.disabled {
     z-index: 1000;
     padding: 0 !important;
     
+  }
+  .menuhumberger{
+    margin-bottom: 1rem;
   }
 }
 
