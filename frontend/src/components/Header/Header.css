@@ -1,9 +1,20 @@
 /* menu pc device */
-header * {
+
+.containheaderalerte{
   overflow: hidden;
 }
+
+
+
+
+header * {
+  overflow: hidden;
+  
+}
+
 header nav.nav1 ul.flex {
   gap: 16px;
+ 
 }
 header nav.nav1 ul li a {
   color: var(--subtitle);

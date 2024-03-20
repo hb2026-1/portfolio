@@ -63,7 +63,7 @@ const Header = ({ url }) => {
     }
   }, [theme]);
   return (
-    <>
+    <div className="containheaderalerte">
       {showmessagerating && (
         <Alerterating
           text={`${t("thanksevaliation")} ${rating !== null ? rating : 0} ${t(
@@ -374,7 +374,7 @@ const Header = ({ url }) => {
           </ul>
         </div>
       </header>
-    </>
+    </div>
   );
 };
 

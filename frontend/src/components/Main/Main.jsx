@@ -117,6 +117,21 @@ const Main = () => {
           <button
             onClick={() => {
               const newdata = datat.filter((item) => {
+                return item.genre === "next";
+              });
+              setdatatafilter(newdata);
+              setselected("next");
+              scrollToTop();
+              sethidebtnmore(true);
+            }}
+            className={selected === "next" ? "btn selected" : "btn"}
+          >
+            <a>Next Js</a>
+          </button>
+
+          <button
+            onClick={() => {
+              const newdata = datat.filter((item) => {
                 return item.genre === "node";
               });
               setdatatafilter(newdata);
@@ -128,6 +143,12 @@ const Main = () => {
           >
             <a>Node Js</a>
           </button>
+
+         
+
+
+
+
         </section>
       </motion.div>
 
@@ -169,9 +190,9 @@ const Main = () => {
                 display: hidebtnmore ? "none" : "block",
               }}
               onClick={() => {
-                if (current <= 2) {
+                if (current <= 3) {
                   setcurrent(current + 1);
-                  if (current == 2) {
+                  if (current == 3) {
                     sethidebtnmore(true);
                   }
                 }

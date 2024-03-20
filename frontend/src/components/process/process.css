@@ -4,6 +4,8 @@
   align-items: center;
   gap: 10rem;
   width: 98%;
+  overflow: hidden;
+
 }
 .containermernprocess span {
   color: var(--blue);

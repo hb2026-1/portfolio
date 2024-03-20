@@ -211,32 +211,40 @@ const Top = () => {
   }
 
   return (
-    <>
+    <div className="ddcontainer">
       {ratingfive && (
         <div style={{ transition: "2s" }} id="containerconfetti">
           <Confetti />
         </div>
       )}
 
-      <section className="section flex jcsb">
+      <section  className="section flex jcsb">
 
 
 
 
         <div className="containertop">
-          <div>
+          <div >
             <img
               className="imge"
               src="https://res.cloudinary.com/dtjpxlbkn/image/upload/f_auto,q_auto/v1/imgportfolio/fpbrjoby42e3ud8vgznt"
               alt="img"
             />
             <span className="icon-verified"></span>
-            <h1>
+            <h1 >
               {t("title1")} <span className="fullstack"> {t("title2")}</span>{" "}
               {t("title3")}
             </h1>
             <div className="paragraphe">{t("paragraphe-top")}</div>
           </div>
+
+
+
+
+
+
+
+
           <Typography className="rating" sx={{ mt: "20px" }} component="legend">
             Portfolio Rating
           </Typography>
@@ -455,7 +463,7 @@ const Top = () => {
           onClick={() => {
             if (isAuthenticated) {
               window.open(
-                "https://res.cloudinary.com/dtjpxlbkn/image/upload/f_auto,q_auto/v1/cv/fqys7c6fau8o0hjgzfjk",
+                "https://res.cloudinary.com/dtjpxlbkn/image/upload/v1710894610/cv/jv6l5jtzcusu8l4tupli.png",
                 "_blank",
                 "noopener noreferrer"
               );
@@ -479,7 +487,7 @@ const Top = () => {
           </Button>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

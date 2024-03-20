@@ -4,8 +4,9 @@
   margin-left: auto;
   margin-right: auto;
   height: 75vh;
-  padding-top: 20px;
+  padding-top: 20px 10px 10px 10px;
   overflow: hidden;
+  
 }
 .containerbtncvmobile{
   display: none;
@@ -40,6 +41,8 @@ section .containertop {
   color: var(--subtitle);
   user-select: none;
   text-align: justify;
+  
+  width: 98%;
 }
 
 section .imge {
@@ -54,8 +57,9 @@ section .imge {
 }
 
 .containeranni {
-  width: 100%;
+  width: 98%;
   height: 70vh;
+
  
 }
 
@@ -202,11 +206,20 @@ transition: 0.8s !important;
 }
 
 @media (min-width: 200px) and (max-width: 700px) {
+ .ddcontainer{
+  
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+ }
+ 
+ 
   .containeranni {
     flex-direction: column;
     text-align: center;
     height: 60vh;
     margin-top: 0;
+    width: 98%;
   }
   .section h1 {
     font-size: 13px;
@@ -216,15 +229,22 @@ transition: 0.8s !important;
     font-size: 12px;
     margin-left: 5px;
     margin-bottom: 1rem;
+    width: 98%;
+    
+    
   }
 
   .section {
-    width: 98%;
+    width:98%;
     flex-direction: column;
     height: 110vh;
+   
+    
+    
   }
   section .containertop {
-    width: 100%;
+    width: 98%;
+    padding: 5px;
   }
   .reseaux {
     gap: 10px;
@@ -272,6 +292,7 @@ transition: 0.8s !important;
   text-align: center;
   
 }
+
 }
 
 @keyframes mytitle {
