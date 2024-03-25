@@ -1,3 +1,10 @@
+.ddcontainer{
+  overflow: hidden;
+  width: 100%;
+}
+
+
+
 .section {
   position: relative;
   width: 90%;
@@ -208,16 +215,16 @@ transition: 0.8s !important;
 @media (min-width: 200px) and (max-width: 700px) {
  .ddcontainer{
   
-  width: 90%;
+  width: 98%;
   margin-left: auto;
   margin-right: auto;
  }
  
  
   .containeranni {
-    flex-direction: column;
+    flex-direction:column-reverse;
     text-align: center;
-    height: 60vh;
+    height: 50vh;
     margin-top: 0;
     width: 98%;
   }
@@ -235,7 +242,7 @@ transition: 0.8s !important;
   }
 
   .section {
-    width:98%;
+    width:100%;
     flex-direction: column;
     height: 110vh;
    
@@ -247,14 +254,19 @@ transition: 0.8s !important;
     padding: 5px;
   }
   .reseaux {
-    gap: 10px;
+    /* gap: 10px; */
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* gap: 10px;
     /* width: 80%; */
     /* position: absolute; */
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-   bottom: 1rem;
-   margin-bottom: 2rem !important;
+    /* top: 80%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+   /* bottom: 1rem; */
+   /* margin-bottom: 2rem !important;  */
   }
   .reseaux .reseaus {
     font-size: 2rem;

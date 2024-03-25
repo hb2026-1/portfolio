@@ -154,17 +154,20 @@ const Top = () => {
     try {
       setLoading(true);
       const token = localStorage.getItem("jwt");
-      const res = await fetch("https://server-portfolio-hb.onrender.com/rating", {
-        method: "POST",
-        credentials: "include",
-        body: JSON.stringify({
-          rating: props,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await fetch(
+        "https://server-portfolio-hb.onrender.com/rating",
+        {
+          method: "POST",
+          credentials: "include",
+          body: JSON.stringify({
+            rating: props,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       setshowmessagerating(true);
       setLoading(false);
@@ -218,32 +221,21 @@ const Top = () => {
         </div>
       )}
 
-      <section  className="section flex jcsb">
-
-
-
-
+      <section className="section flex jcsb">
         <div className="containertop">
-          <div >
+          <div>
             <img
               className="imge"
               src="https://res.cloudinary.com/dtjpxlbkn/image/upload/f_auto,q_auto/v1/imgportfolio/fpbrjoby42e3ud8vgznt"
               alt="img"
             />
             <span className="icon-verified"></span>
-            <h1 >
+            <h1>
               {t("title1")} <span className="fullstack"> {t("title2")}</span>{" "}
               {t("title3")}
             </h1>
             <div className="paragraphe">{t("paragraphe-top")}</div>
           </div>
-
-
-
-
-
-
-
 
           <Typography className="rating" sx={{ mt: "20px" }} component="legend">
             Portfolio Rating
@@ -278,20 +270,6 @@ const Top = () => {
             />
           )}
         </div>
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -407,7 +385,7 @@ const Top = () => {
               onClick={() => {
                 if (isAuthenticated) {
                   window.open(
-                    "https://res.cloudinary.com/dtjpxlbkn/image/upload/v1710894610/cv/jv6l5jtzcusu8l4tupli.png",
+                    "https://res.cloudinary.com/dtjpxlbkn/image/upload/f_auto,q_auto/v1/cv/off6dbddabzb7pn4ocsc",
                     "_blank",
                     "noopener noreferrer"
                   );
@@ -447,23 +425,14 @@ const Top = () => {
               />
             </div>
           </motion.div>
-
-
         </div>
-
-
-
-
-
-
-
 
         <div
           className="containerbtncvmobile"
           onClick={() => {
             if (isAuthenticated) {
               window.open(
-                "https://res.cloudinary.com/dtjpxlbkn/image/upload/v1710894610/cv/jv6l5jtzcusu8l4tupli.png",
+                "https://res.cloudinary.com/dtjpxlbkn/image/upload/f_auto,q_auto/v1/cv/off6dbddabzb7pn4ocsc",
                 "_blank",
                 "noopener noreferrer"
               );
