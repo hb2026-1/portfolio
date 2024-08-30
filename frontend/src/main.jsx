@@ -12,7 +12,7 @@ import About from './pages/about/about.jsx';
 import Articles from "./pages/articles/articles.jsx"
 import EmailConfirm from './components/confirmationemail/emailConfirm.jsx';
 import EmailConfirm2 from './components/confirmationemail2/emailConfirm2.jsx';
-
+import Addemail from './components/addemail/addemail.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 const router = createBrowserRouter([
   {
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: <Signin />,
+  },
+  {
+    path: "/addemail",
+    element: <Addemail />,
   },
   {
     path: "/signup",
