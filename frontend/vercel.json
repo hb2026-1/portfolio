@@ -1,29 +1,8 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/"
-    },
-    {
-      "src": "/signin",
-      "dest": "/"
-    },
-    {
-      "src": "/signup",
-      "dest": "/"
-    },
-    {
-      "src": "/about",
-      "dest": "/"
-    },
-    {
-      "src": "/confirmation",
-      "dest": "/"
-    },
-    {
-      "src": "/articles",
-      "dest": "/"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
-
