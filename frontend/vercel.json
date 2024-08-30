@@ -1,1 +1,30 @@
+{
+"routes":[
+{
+    "src": "/",
+    "dest": "/",
+  },
+  {
+    "src": "/signin",
+   "dest": "/",
+  },
+  {
+    "src": "/signup",
+    "dest": "/",
+  },
+  {
+    "src": "/about",
+   "dest": "/",
+  },
+  {
+    "src": "/confirmation",
+   "dest": "/",
+  },
+  {
+    "src": "/articles",
+    "dest": "/"
+  }
 
+
+]  
+}
