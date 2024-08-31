@@ -7,12 +7,14 @@ import { useTranslation } from "react-i18next";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useAuth } from "../../context/AuthContext";
 import ReactLoading from "react-loading";
+import Alerteaddemail from "../button/alerteaddemail";
 const regEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 let a = 0;
 let b = 0;
 let c = 0;
-const Signup = () => {
-  const { setshowmessageSignin } = useAuth();
+const Addemail = () => {
+  const { setshowmessageSignin, setshowmessageaddemail, showmessageaddemail } =
+    useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const [emailup, setemailup] = useState("");
@@ -50,11 +52,11 @@ const Signup = () => {
       const data = await res.json();
       if (data.validatorError) {
         data.validatorError.forEach((item) => {
-          if (item.path == "email") {
+          if (item.path == "email" || item.path == "flname") {
             setverificolorup("borderRed");
-          }
-          if (item.path == "password") {
             setverificolor2up("borderRed");
+            document.getElementById("errormess").textContent =
+              "Email or Name not valid";
           }
         });
       }
@@ -63,6 +65,13 @@ const Signup = () => {
         setverificolorup("borderRed");
       }
       if (data.id) {
+        setemailup("");
+        setflname("");
+        setverificolorup("");
+        setverificolor2up("");
+        setshowmessageaddemail(true);
+        document.getElementById("errormess").textContent = "";
+
         navigate("/addemail");
         setshowmessageSignin(true);
         a = 0;
@@ -143,10 +152,20 @@ const Signup = () => {
                 name="flname"
                 type="text"
                 id="flname"
+                value={flname}
               />
 
               <label>{t("fullname")}</label>
             </div>
+            <p
+              id="errormess"
+              style={{
+                color: "red",
+                fontSize: "16px",
+                fontWeight: "400",
+                textAlign: "left",
+              }}
+            ></p>
 
             <a
               className="true"
@@ -175,9 +194,13 @@ const Signup = () => {
             </a>
           </form>
         </div>
+
+        {showmessageaddemail && (
+          <Alerteaddemail text={"Please verify your email"} succ={"info"} />
+        )}
       </motion.div>
     </HelmetProvider>
   );
 };
 
-export default Signup;
+export default Addemail;

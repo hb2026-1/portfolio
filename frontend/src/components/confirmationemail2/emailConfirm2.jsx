@@ -41,7 +41,7 @@ const EmailVerify2 = () => {
         setValidUrl(true);
         setLoading(false);
       } catch (error) {
-        console.log(error);
+        
         if (error.response.data.error == "Token not valid") {
           setafficheerreur("tknvalid");
         } else if (error.response.data.error == "Email already verified") {

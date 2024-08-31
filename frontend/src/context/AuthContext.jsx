@@ -6,6 +6,7 @@ const AuthContext = createContext(null);
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [showmessageSignin, setshowmessageSignin] = useState(false);
+  const [showmessageaddemail, setshowmessageaddemail] = useState(false);
   const [showmessageError, setshowmessageError] = useState(false);
   const [showmessagerating, setshowmessagerating] = useState(false);
   const [rating, setrating] = useState(null);
@@ -81,6 +82,8 @@ export const AuthProvider = ({ children }) => {
         emailuser,
         setIsAuthenticated,
         setemailuser,
+        setshowmessageaddemail,
+        showmessageaddemail,
       }}
     >
       {children}

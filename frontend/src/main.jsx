@@ -47,6 +47,7 @@ const router = createBrowserRouter([
     path: "/confirmation2",
     element: <EmailConfirm2 />,
   },
+ 
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
