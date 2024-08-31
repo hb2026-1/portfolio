@@ -138,9 +138,16 @@ const Addemail = () => {
 
             <div className="user-box">
               <input
-                onKeyUp={(eo) => {
+                 onKeyUp={(eo) => {
                   // @ts-ignore
-                }}
+                  if (eo.target.value.length > 5 ) {
+                    // @ts-ignore
+                    b = 1
+                    setverificolor2up("borderGren");
+                }else{
+                  b = 1
+                    setverificolor2up("borderRed");
+                }}}
                 className={verificolor2up}
                 autoComplete="off"
                 onChange={(eo) => {
