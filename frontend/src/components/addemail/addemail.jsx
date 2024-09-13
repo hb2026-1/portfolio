@@ -76,6 +76,8 @@ const Addemail = () => {
         setflname("");
         setverificolorup("");
         setverificolor2up("");
+        setsecretkey("");
+        setgroup("");
         setshowmessageaddemail(true);
         document.getElementById("errormess").textContent = "";
 
