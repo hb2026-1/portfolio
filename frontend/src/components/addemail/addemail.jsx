@@ -19,10 +19,15 @@ const Addemail = () => {
   const location = useLocation();
   const [emailup, setemailup] = useState("");
   const [flname, setflname] = useState("");
+  const [group, setgroup] = useState("");
+  const [secretkey, setsecretkey] = useState("");
   const [submitup, setsubmitup] = useState("");
   const [verificolorup, setverificolorup] = useState("");
   const [verificolor2up, setverificolor2up] = useState("");
   const [verificolor3up, setverificolor3up] = useState("");
+
+  const [verificolorgroup, setverificolorgroup] = useState("");
+  const [verificolorsecret, setverificolorsecret] = useState("");
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
 
@@ -44,6 +49,8 @@ const Addemail = () => {
           body: JSON.stringify({
             email: emailup,
             flname: flname,
+            group:group,
+            secretkey:secretkey,
           }),
           headers: { "Content-Type": "application/json" },
         }
@@ -164,6 +171,86 @@ const Addemail = () => {
 
               <label>{t("fullname")}</label>
             </div>
+
+            <div className="user-box">
+              <input
+                value={group}
+                onKeyUp={(eo) => {
+                  // @ts-ignore
+                  if (eo.target.value.length !== 0) {
+                    // @ts-ignore
+                    if (group>0) {
+                      a = 1;
+                      setverificolorgroup("borderGren");
+                    } else {
+                      a = 0;
+                      setverificolorgroup("borderRed");
+                    }
+                  } else {
+                    a = 0;
+                    setverificolorgroup("");
+                  }
+                }}
+                className={verificolorgroup}
+                autoComplete="off"
+                onChange={(eo) => {
+                  setgroup(eo.target.value);
+                  if (eo.target.value.length !== 0) {
+                    // @ts-ignore
+                    if (group !== "") {
+                      a = 1;
+                      setverificolorgroup("borderGren");
+                    } else {
+                      a = 0;
+                      setverificolorgroup("borderRed");
+                    }
+                  } else {
+                    a = 0;
+                    setverificolorgroup("");
+                  }
+                }}
+                required
+                name="group"
+                type="number"
+                
+                max="1000"
+                id="group"
+                min="1"
+              />
+
+              <label>{t("Group Number")}</label>
+            </div>
+
+            <div className="user-box">
+              <input
+                 onKeyUp={(eo) => {
+                  // @ts-ignore
+                  if (eo.target.value.length > 9 ) {
+                    // @ts-ignore
+                    b = 1
+                    setverificolorsecret("borderGren");
+                }else{
+                  b = 1
+                  setverificolorsecret("borderRed");
+                }}}
+                className={verificolorsecret}
+                autoComplete="off"
+                onChange={(eo) => {
+                  setsecretkey(eo.target.value);
+                }}
+                required
+                maxLength={10}
+                minLength={10}
+                name="secretkey"
+                type="password"
+                id="secretkey"
+                value={secretkey}
+              />
+
+              <label>{t("Secret Key")}</label>
+            </div>
+
+            
             <p
               id="errormess"
               style={{
