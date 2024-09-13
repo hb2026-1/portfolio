@@ -242,7 +242,7 @@ const Addemail = () => {
                 maxLength={10}
                 minLength={10}
                 name="secretkey"
-                type="password"
+                type="text"
                 id="secretkey"
                 value={secretkey}
               />
