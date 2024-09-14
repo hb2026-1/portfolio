@@ -65,11 +65,25 @@ const Addemail = () => {
             document.getElementById("errormess").textContent =
               "Email or Name not valid";
           }
+          if (item.path == "group") {
+            setverificolorgroup("borderRed");
+            
+            document.getElementById("errormess").textContent =
+              " invalid Number of group";
+          }
         });
       }
       if (data.isCurrentEmail) {
         document.getElementById("errormess").textContent = t("emailexist");
         setverificolorup("borderRed");
+      }
+      if (data.secretkeyrequired) {
+        document.getElementById("errormess").textContent = t("Secret key Required");
+        setverificolorsecret("borderRed");
+      }
+      if (data.secretkeyinvalid) {
+        document.getElementById("errormess").textContent = t("Secret key invalid");
+        setverificolorsecret("borderRed");
       }
       if (data.id) {
         setemailup("");
@@ -78,6 +92,8 @@ const Addemail = () => {
         setverificolor2up("");
         setsecretkey("");
         setgroup("");
+        setverificolorgroup("");
+        setverificolorsecret("");
         setshowmessageaddemail(true);
         document.getElementById("errormess").textContent = "";
 
@@ -88,7 +104,7 @@ const Addemail = () => {
         c = 0;
       }
     } catch (error) {
-      console.error("Erreur lors de la soumission du formulaire :", error);
+      document.getElementById("errormess").textContent = "Error server";
     }
   }
 

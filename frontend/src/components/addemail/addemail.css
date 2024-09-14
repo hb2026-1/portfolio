@@ -248,7 +248,7 @@
   
   @media (max-width: 450px) {
     .login-box2 {
-      width: 280px;
+      width: 300px;
       padding: 10px;
       margin: 20px auto;
     }
@@ -256,7 +256,7 @@
       font-size: 1rem;
     }
     .login-box2 .user-box input {
-      font-size: 12px;
+      font-size: 18px;
     }
     .login-box2 .user-box label {
       font-size: 14px;

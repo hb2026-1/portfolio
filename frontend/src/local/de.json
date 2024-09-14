@@ -57,6 +57,8 @@
     "fullname":"vollständiger Name",
     "Secret Key":"Geheimer Schlüssel",
     "Group Number":"Gruppennummer",
+    "Secret key Required":"Geheims Schlüssel erforderlich",
+    "Secret key invalid":"Ungültiger geheimer Schlüssel",
     "paragrapheaccordion":"Für mich ist technische Transparenz entscheidend, daher möchte ich die Hintergründe des Erstellungsprozesses meiner Website teilen. Durch die Enthüllung der Kulissen der Infrastruktur soll ein klares Verständnis für die Plattform vermittelt werden. Auf der Frontend-Seite habe ich Tools bevorzugt, die eine dynamische und reaktive Benutzererfahrung gewährleisten. Der Schwerpunkt lag auf schneller Entwicklung mit geeigneten Optimierungslösungen. Für das Hosting wurde eine zuverlässige Plattform ausgewählt, und auf der Backend-Seite wurden Technologien ausgewählt, um eine solide Grundlage zu gewährleisten. Sicherheit war eine Hauptanliegen, mit der Umsetzung von Protokollen, um den Schutz der Benutzer zu gewährleisten. Die Absicht hinter dieser technischen Transparenz ist, vollstes Vertrauen aufzubauen und das Bekenntnis zu einem modernen, leistungsstarken und sicheren Ansatz in der Webentwicklung zu betonen."
     
 
