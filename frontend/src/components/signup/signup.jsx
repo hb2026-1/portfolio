@@ -42,7 +42,7 @@ const Signup = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        process.env.URL_SERVER_SAIGNUP,
+        "https://server-portfolio-hb.onrender.com/signup",
         {
           method: "POST",
           body: JSON.stringify({
