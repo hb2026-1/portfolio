@@ -43,7 +43,7 @@ const Addemail = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        "https://server-portfolio-hb.onrender.com/addemail",
+        process.env.URL_SERVER_ADDEMAIL,
         {
           method: "POST",
           body: JSON.stringify({
