@@ -59,6 +59,7 @@
     "Group Number":"Numéro de groupe",
     "Secret key Required":"Clé secrète requise",
     "Secret key invalid":"Clé secrète invalide",
+    "No appointments are available":"Aucun rendez-vous n'est disponible",
     "paragrapheaccordion":"Je considère que la transparence technique est cruciale, c'est pourquoi je souhaite partager les dessous du processus de création de mon site web. En dévoilant les coulisses de l'infrastructure, l'objectif est de fournir une compréhension claire de la plateforme. Du côté frontend, j'ai privilégié des outils qui garantissent une expérience utilisateur dynamique et réactive. L'accent a été mis sur la rapidité de développement avec des solutions d'optimisation appropriées. Pour l'hébergement, une plateforme fiable a été choisie, et du côté backend, des technologies ont été sélectionnées pour assurer une base solide. La sécurité a été une préoccupation majeure, avec la mise en place de protocoles pour garantir la protection des utilisateurs. L'intention derrière cette transparence technique est de construire une confiance totale et de souligner l'engagement envers une approche moderne, performante et sécurisée du développement web."
 
 

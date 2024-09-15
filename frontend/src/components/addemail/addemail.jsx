@@ -85,6 +85,10 @@ const Addemail = () => {
         document.getElementById("errormess").textContent = t("Secret key invalid");
         setverificolorsecret("borderRed");
       }
+      if (data.emptytable) {
+        document.getElementById("errormess").textContent = t("No appointments are available");
+        
+      }
       if (data.id) {
         setemailup("");
         setflname("");
