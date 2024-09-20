@@ -76,6 +76,7 @@ const Addemail = () => {
       );
       setLoading(false);
       const data = await res.json();
+      
       if (data.validatorError) {
         data.validatorError.forEach((item) => {
           if (item.path == "email" || item.path == "flname") {
@@ -127,6 +128,7 @@ const Addemail = () => {
         c = 0;
       }
     } catch (error) {
+      console.log(error)
       setLoading(false);
       document.getElementById("errormess").textContent = "Error server";
     }
