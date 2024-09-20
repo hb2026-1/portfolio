@@ -30,6 +30,25 @@ const Addemail = () => {
   const [verificolorsecret, setverificolorsecret] = useState("");
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("https://server-portfolio-hb.onrender.com/ping", {
+          method: "GET", // Changement de POST à GET
+          headers: { "Content-Type": "application/json" },
+        });
+  
+        if (!res.ok) {
+          throw new Error('wait ..server in cold start...');
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+  
 
   useEffect(() => {
     if (a === 1 && b === 1 && c === 1) {
