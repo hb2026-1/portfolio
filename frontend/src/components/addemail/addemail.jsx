@@ -130,7 +130,7 @@ const Addemail = () => {
     } catch (error) {
       console.log(error)
       setLoading(false);
-      document.getElementById("errormess").textContent = "Error server";
+      document.getElementById("errormess").textContent = error;
     }
   }
 
