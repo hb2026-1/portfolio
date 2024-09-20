@@ -127,6 +127,7 @@ const Addemail = () => {
         c = 0;
       }
     } catch (error) {
+      setLoading(false);
       document.getElementById("errormess").textContent = "Error server";
     }
   }
