@@ -8,6 +8,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useAuth } from "../../context/AuthContext";
 import ReactLoading from "react-loading";
 import Alerteaddemail from "../button/alerteaddemail";
+import { orange } from "@mui/material/colors";
 const regEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 let a = 0;
 let b = 0;
@@ -109,8 +110,9 @@ const Addemail = () => {
         document.getElementById("errormess").textContent = t("No appointments are available");
         
       }
-      if (data.status === 429) {
-        alert('Vous avez atteint la limite de requêtes. Veuillez réessayer plus tard.');
+      if (data.tomany) {
+        document.getElementById("errormess").textContent = t("Too many requests, please try again later");
+        document.getElementById("errormess").style.color="orange"
       }
       if (data.id) {
         setemailup("");
