@@ -109,6 +109,9 @@ const Addemail = () => {
         document.getElementById("errormess").textContent = t("No appointments are available");
         
       }
+      if (data.status === 429) {
+        alert('Vous avez atteint la limite de requêtes. Veuillez réessayer plus tard.');
+      }
       if (data.id) {
         setemailup("");
         setflname("");
