@@ -34,7 +34,11 @@ export const AuthProvider = ({ children }) => {
       }
 
       const data = await res.json();
-      setrating(data.user.rating);
+      if (data.errortoken) {
+        return
+      }
+      if (data.user) {
+        setrating(data.user.rating);
       setIsAuthenticated(true);
       setLoading(false);
       setemailuser(data.user.email);
@@ -44,6 +48,8 @@ export const AuthProvider = ({ children }) => {
       //   email:data.email
       // };
       return 
+      }
+      
     } catch (error) {
       //   console.error("Erreur lors de la requête:", error);
       setIsAuthenticated(false);
