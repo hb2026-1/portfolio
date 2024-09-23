@@ -28,9 +28,9 @@ export const AuthProvider = ({ children }) => {
       );
 
       if (!res.ok) {
-        // console.error(`Réponse HTTP non OK: ${res.status}`);
+         console.error(`Réponse HTTP non OK: ${res.status}`);
         setIsAuthenticated(false);
-        return;
+        return ;
       }
 
       const data = await res.json();
