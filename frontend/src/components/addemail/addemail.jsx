@@ -85,30 +85,35 @@ const Addemail = () => {
             setverificolor2up("borderRed");
             document.getElementById("errormess").textContent =
               "Email or Name not valid";
+              document.getElementById("errormess").style.color="red"
           }
           if (item.path == "group") {
             setverificolorgroup("borderRed");
             
             document.getElementById("errormess").textContent =
               " invalid Number of group";
+              document.getElementById("errormess").style.color="red"
           }
         });
       }
       if (data.isCurrentEmail) {
         document.getElementById("errormess").textContent = t("emailexist");
         setverificolorup("borderRed");
+        document.getElementById("errormess").style.color="red"
       }
       if (data.secretkeyrequired) {
         document.getElementById("errormess").textContent = t("Secret key Required");
         setverificolorsecret("borderRed");
+        document.getElementById("errormess").style.color="red"
       }
       if (data.secretkeyinvalid) {
         document.getElementById("errormess").textContent = t("Secret key invalid");
         setverificolorsecret("borderRed");
+        document.getElementById("errormess").style.color="red"
       }
       if (data.emptytable) {
         document.getElementById("errormess").textContent = t("No appointments are available");
-        
+        document.getElementById("errormess").style.color="red"
       }
       if (data.tomany) {
         document.getElementById("errormess").textContent = t("Too many requests, please try again later");
