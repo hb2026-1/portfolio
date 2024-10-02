@@ -9,6 +9,7 @@ import { useAuth } from "../../context/AuthContext";
 import ReactLoading from "react-loading";
 import Alerteaddemail from "../button/alerteaddemail";
 import { orange } from "@mui/material/colors";
+import toast from "react-hot-toast";
 const regEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 let a = 0;
 let b = 0;
@@ -128,8 +129,9 @@ const Addemail = () => {
         setgroup("");
         setverificolorgroup("");
         setverificolorsecret("");
-        setshowmessageaddemail(true);
+        // setshowmessageaddemail(true);
         document.getElementById("errormess").textContent = "";
+        toast.success("Please check your email. If you don't find it, please check your spam folder.", { duration: 8000 });
 
         navigate("/addemail");
         setshowmessageSignin(true);

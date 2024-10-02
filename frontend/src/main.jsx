@@ -14,6 +14,7 @@ import EmailConfirm from './components/confirmationemail/emailConfirm.jsx';
 import EmailConfirm2 from './components/confirmationemail2/emailConfirm2.jsx';
 import Addemail from './components/addemail/addemail.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
+import { Toaster } from "react-hot-toast";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -54,6 +55,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
      <RouterProvider router={router} />
+     <Toaster position="top-right" />
      </AuthProvider>
    </React.StrictMode>
 )
