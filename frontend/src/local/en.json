@@ -61,5 +61,6 @@
     "Secret key Required":"Secret key required",
     "Secret key invalid":"invalid secret key",
     "No appointments are available":"No appointments are available",
+    "confirmeremail":"Already registered!. Please confirm your email",
     "paragrapheaccordion":"I consider technical transparency crucial, which is why I want to share the inner workings of the creation process of my website. By unveiling the behind-the-scenes of the infrastructure, the goal is to provide a clear understanding of the platform. On the frontend, I favored tools that ensure a dynamic and responsive user experience. Emphasis has been placed on rapid development with appropriate optimization solutions. For hosting, a reliable platform has been chosen, and on the backend, technologies have been selected to ensure a strong foundation. Security has been a major concern, with the implementation of protocols to ensure user protection. The intention behind this technical transparency is to build complete trust and underscore the commitment to a modern, high-performing, and secure approach to web development."
 }

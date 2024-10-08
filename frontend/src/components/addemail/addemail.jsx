@@ -102,6 +102,11 @@ const Addemail = () => {
         setverificolorup("borderRed");
         document.getElementById("errormess").style.color="red"
       }
+      if (data.isCurrentEmailverify) {
+        document.getElementById("errormess").textContent = t("confirmeremail");
+        setverificolorup("borderRed");
+        document.getElementById("errormess").style.color="red"
+      }
       if (data.secretkeyrequired) {
         document.getElementById("errormess").textContent = t("Secret key Required");
         setverificolorsecret("borderRed");
