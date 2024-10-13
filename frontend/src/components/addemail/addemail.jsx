@@ -2,13 +2,14 @@ import { useLocation } from "react-router-dom";
 import "./addemail.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useAuth } from "../../context/AuthContext";
 import ReactLoading from "react-loading";
 import Alerteaddemail from "../button/alerteaddemail";
-import { orange } from "@mui/material/colors";
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import toast from "react-hot-toast";
 const regEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 let a = 0;
@@ -50,6 +51,10 @@ const Addemail = () => {
   
     fetchData();
   }, []);
+
+  function pagechangerdv() {
+    navigate("/addemail")
+  }
   
 
   useEffect(() => {
@@ -136,7 +141,7 @@ const Addemail = () => {
         setverificolorsecret("");
         // setshowmessageaddemail(true);
         document.getElementById("errormess").textContent = "";
-        toast.success("Please check your email. If you don't find it, please check your spam folder.", { duration: 8000 });
+        toast.success("يرجى مراجعة بريدك الإلكتروني. إذا لم تجد الرسالة، يرجى التحقق من صندوق البريد المزعج (السبام)", { duration: 8000 });
 
         navigate("/addemail");
         setshowmessageSignin(true);
@@ -167,6 +172,7 @@ const Addemail = () => {
         transition={{ duration: 2.5 }}
         className="login-box2"
       >
+       
         <div className="login-box2">
           <p className="title">{t("simulation")}</p>
 
@@ -201,7 +207,7 @@ const Addemail = () => {
                 id="emailup"
               />
 
-              <label>{t("email")}</label>
+              <label id="label1">{t("email2")}</label>
             </div>
 
             <div className="user-box">
@@ -230,7 +236,7 @@ const Addemail = () => {
                 value={flname}
               />
 
-              <label>{t("fullname")}</label>
+              <label id="label2">{t("fullname")}</label>
             </div>
 
             <div className="user-box">
@@ -279,7 +285,7 @@ const Addemail = () => {
                 min="1"
               />
 
-              <label>{t("Group Number")}</label>
+              <label id="label3">{t("Group Number")}</label>
             </div>
 
             <div className="user-box">
@@ -308,7 +314,7 @@ const Addemail = () => {
                 value={secretkey}
               />
 
-              <label>{t("Secret Key")}</label>
+              <label id="label4">{t("Secret Key")}</label>
             </div>
 
             
@@ -321,7 +327,7 @@ const Addemail = () => {
                 textAlign: "left",
               }}
             ></p>
-
+ <div className="divsubmit">
             <a
               className="true"
               onClick={submitform}
@@ -339,17 +345,34 @@ const Addemail = () => {
                     className="loaderconfi"
                     type={"spin"}
                     color={"black"}
-                    height={"30px"}
-                    width={"30px"}
+                    height={"20px"}
+                    width={"20px"}
                   />
                 </div>
               ) : (
-                t("submit")
+                t("submit2")
               )}
             </a>
+            
+            <Stack className="stack" direction="row" spacing={2} justifyContent="center">
+      
+      <Button onClick={() => {
+    navigate("/changeappoi");
+  }}  className="btnchange" variant="contained" color="secondary">
+      {t("change")}
+      </Button>
+    </Stack>
+            </div>
           </form>
-        </div>
+          
 
+          
+
+
+
+
+        </div>
+        
         {showmessageaddemail && (
           <Alerteaddemail text={"Please verify your email"} succ={"info"} />
         )}

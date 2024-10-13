@@ -13,6 +13,8 @@ import Articles from "./pages/articles/articles.jsx"
 import EmailConfirm from './components/confirmationemail/emailConfirm.jsx';
 import EmailConfirm2 from './components/confirmationemail2/emailConfirm2.jsx';
 import Addemail from './components/addemail/addemail.jsx';
+import Changerdv from './components/changerdv/changerdv.jsx';
+import Changeappoi from './components/changeappoi.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { Toaster } from "react-hot-toast";
 const router = createBrowserRouter([
@@ -47,6 +49,14 @@ const router = createBrowserRouter([
   {
     path: "/confirmation2",
     element: <EmailConfirm2 />,
+  },
+  {
+    path: "/changeappointment",
+    element: <Changerdv />,
+  },
+  {
+    path: "/changeappoi",
+    element: <Changeappoi />,
   },
  
 ]);

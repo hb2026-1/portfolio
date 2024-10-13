@@ -1,15 +1,13 @@
-
-
 .divsubmit{
   display: inline;
   
 }
 .btnchange{
-  margin-bottom: 2rem !important;
-  width: 80% !important;
-  font-size: 20px !important;
-  font-weight: 500 !important;
+  margin-bottom: 1rem !important;
   
+}
+.title2{
+  font-size: 15px !important;
 }
 .hide{
   transform: translateX(100%) !important; /* Déplace le div complètement à droite */
@@ -31,9 +29,6 @@
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   
-}
-.stack{
-  margin-top: 2rem;
 }
 
 .login-box2 p:first-child {
@@ -65,24 +60,12 @@
 .login-box2 .user-box label {
   position: absolute;
   top: 0;
-  /* left: 0; */
+  left: 0;
+
   font-size: 16px;
   color: var(--h1);
   pointer-events: none;
   transition: 0.5s;
-  
-}
-#label1{
-  left:70% !important;
-}
-#label2{
-  left:75% !important;
-}
-#label3{
-  left:80% !important;
-}
-#label4{
-  left:75% !important;
 }
 
 .login-box2 .user-box input:focus ~ label,
@@ -105,11 +88,9 @@
   overflow: hidden;
   transition: 0.5s;
   margin-top: 40px;
-  letter-spacing: 0px !important;
+  letter-spacing: 3px;
   cursor: not-allowed;
   pointer-events: none;
-  width: 8rem;
-  text-align: center;
 }
 
 .login-box2 a span {
@@ -315,8 +296,10 @@
   }
   
   .btnchange{
-    width: 80% !important;
-    
-    
+  width: auto;
+  font-size: 13px !important;
+  }
+  .title2{
+    font-size: 13px !important;
   }
 }
