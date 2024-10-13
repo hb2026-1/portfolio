@@ -41,7 +41,7 @@ const EditRendezVous = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const url2 = `http://localhost:3000/get?token=${token}`;
+        const url2 = `https://server-portfolio-hb.onrender.com/get?token=${token}`;
         const response = await axios.get(url2);
         
 
@@ -75,7 +75,7 @@ const EditRendezVous = () => {
     try {
       setLoading2(true);
       const res = await fetch(
-        `http://localhost:3000/confirmationchangerdv?token=${token}`,
+        `https://server-portfolio-hb.onrender.com/confirmationchangerdv?token=${token}`,
         {
           method: "POST",
           credentials: "include",

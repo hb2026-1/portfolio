@@ -26,7 +26,7 @@ const Addemail = () => {
     if (emailup!=="") {
       try {
         setLoading(true);
-        const res = await fetch("http://localhost:3000/verifyemail", {
+        const res = await fetch("https://server-portfolio-hb.onrender.com/verifyemail", {
           method: "POST",
           body: JSON.stringify({
             email: emailup,
