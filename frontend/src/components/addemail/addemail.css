@@ -7,7 +7,7 @@
 .btnchange{
   margin-bottom: 2rem !important;
   width: 80% !important;
-  font-size: 15px !important;
+  font-size: 20px !important;
   font-weight: 600 !important;
   
 }
@@ -277,7 +277,7 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .login-box2 {
     width: 300px;
     padding: 10px;
