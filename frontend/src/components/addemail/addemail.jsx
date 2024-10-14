@@ -324,7 +324,7 @@ const Addemail = () => {
                 color: "red",
                 fontSize: "16px",
                 fontWeight: "400",
-                textAlign: "left",
+                textAlign: "right",
               }}
             ></p>
  <div className="divsubmit">
