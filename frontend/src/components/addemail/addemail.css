@@ -293,7 +293,7 @@
     font-size: 14px;
   }
   .login-box2 form a {
-    font-size: 14px;
+    font-size: 18px !important;
   }
   .login-box2 p:last-child {
     font-size: 12px;
