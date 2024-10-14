@@ -7,8 +7,8 @@
 .btnchange{
   margin-bottom: 2rem !important;
   width: 80% !important;
-  font-size: 20px !important;
-  font-weight: 500 !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
   
 }
 .hide{
@@ -34,6 +34,7 @@
 }
 .stack{
   margin-top: 2rem;
+  border: 2px solid red;
 }
 
 .login-box2 p:first-child {
@@ -315,7 +316,8 @@
   }
   
   .btnchange{
-    width: 80% !important;
+    width:80% !important;
+    
     
     
   }

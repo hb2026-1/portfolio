@@ -228,7 +228,7 @@ const Addemail = () => {
                   setflname(eo.target.value);
                 }}
                 required
-                maxLength={30}
+                maxLength={50}
                 minLength={6}
                 name="flname"
                 type="text"
@@ -278,11 +278,11 @@ const Addemail = () => {
                 }}
                 required
                 name="group"
-                type="number"
+                type="text"
                 
-                max="1000"
+                
                 id="group"
-                min="1"
+                
               />
 
               <label id="label3">{t("Group Number")}</label>
@@ -354,7 +354,7 @@ const Addemail = () => {
               )}
             </a>
             
-            <Stack className="stack" direction="row" spacing={2} justifyContent="center">
+            <Stack className="stack" direction="row" spacing={2} justifyContent="center" >
       
       <Button onClick={() => {
     navigate("/changeappoi");
