@@ -105,6 +105,7 @@ const EditRendezVous = () => {
         setValidUrl(null);
       }
     } catch (error) {
+      document.getElementById("der").textContent = error;
       console.error("Erreur lors de la soumission du formulaire :", error);
     }
   }
@@ -199,6 +200,7 @@ const EditRendezVous = () => {
                   }),
                 }}
               />
+              <p id="der" style={{color:"red"}}>-----</p>
               <a onClick={handlechangerdv} className="true" id="spano">
                 <span></span>
                 <span></span>
