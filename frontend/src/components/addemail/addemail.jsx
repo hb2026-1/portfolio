@@ -90,14 +90,14 @@ const Addemail = () => {
             setverificolorup("borderRed");
             setverificolor2up("borderRed");
             document.getElementById("errormess").textContent =
-              "Email or Name not valid";
+              "البريد الإلكتروني أو الإسم خاطئ";
               document.getElementById("errormess").style.color="red"
           }
           if (item.path == "group") {
             setverificolorgroup("borderRed");
             
             document.getElementById("errormess").textContent =
-              " invalid Number of group";
+              " رقم الفوج خاطئ";
               document.getElementById("errormess").style.color="red"
           }
         });
