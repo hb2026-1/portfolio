@@ -26,10 +26,10 @@ const router = createBrowserRouter([
     path: "/signin",
     element: <Signin />,
   },
-  {
-    path: "/addemail",
-    element: <Addemail />,
-  },
+  // {
+  //   path: "/addemail",
+  //   element: <Addemail />,
+  // },
   {
     path: "/signup",
     element: <Signup />,
