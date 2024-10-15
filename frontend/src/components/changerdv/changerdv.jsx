@@ -16,7 +16,7 @@ const EditRendezVous = () => {
   const [loading, setLoading] = useState(false);
   const [loading2, setLoading2] = useState(false);
   const [validUrl, setValidUrl] = useState(null);
-  const [validUrl2, setValidUrl2] = useState("");
+  const [validUrl2, setValidUrl2] = useState("fin");
   const [afficheerreur, setafficheerreur] = useState("");
   const { t } = useTranslation();
   const location = useLocation();
@@ -38,104 +38,104 @@ const EditRendezVous = () => {
   //   verifyEmailUrl();
   // }, [token]);
 
-  useEffect(() => {
-    const fetchAppointments = async () => {
-      try {
-        const url2 = `https://server-portfolio-hb.onrender.com/get?token=${token}`;
-        const response = await axios.get(url2);
+  // useEffect(() => {
+  //   const fetchAppointments = async () => {
+  //     try {
+  //       const url2 = `https://server-portfolio-hb.onrender.com/get?token=${token}`;
+  //       const response = await axios.get(url2);
         
 
-        if (response.data.errortoken === "Token not valid") {
-          setLoading(false);
-          setValidUrl(false);
-        }
-        if (response.data.erroralreadychanged) {
-          setValidUrl2("dd");
-          setValidUrl(null);
-        }
-        if (response.data.datas === "data is available") {
-          setValidUrl(true);
-          setAppointments(response.data.promoteurs);
-        }
-      } catch (error) {
-        setLoading(false);
-        setValidUrl(false);
-      }
-    };
+  //       if (response.data.errortoken === "Token not valid") {
+  //         setLoading(false);
+  //         setValidUrl(false);
+  //       }
+  //       if (response.data.erroralreadychanged) {
+  //         setValidUrl2("dd");
+  //         setValidUrl(null);
+  //       }
+  //       if (response.data.datas === "data is available") {
+  //         setValidUrl(true);
+  //         setAppointments(response.data.promoteurs);
+  //       }
+  //     } catch (error) {
+  //       setLoading(false);
+  //       setValidUrl(false);
+  //     }
+  //   };
 
-    fetchAppointments();
-  }, [token]);
+  //   fetchAppointments();
+  // }, [token]);
 
-  async function handlechangerdv() {
-    let selectedDateValue = selectedDate.value;
-    let formattedDateValue = selectedDateValue.replace(/\//g, "-");
-    let dateParts = formattedDateValue.split("-");
-    let formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+  // async function handlechangerdv() {
+  //   let selectedDateValue = selectedDate.value;
+  //   let formattedDateValue = selectedDateValue.replace(/\//g, "-");
+  //   let dateParts = formattedDateValue.split("-");
+  //   let formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
 
-    try {
-      setLoading2(true);
-      const res = await fetch(
-        `https://server-portfolio-hb.onrender.com/confirmationchangerdv?token=${token}`,
-        {
-          method: "POST",
-          credentials: "include",
-          body: JSON.stringify({
-            date: formattedDate,
-            hour: selectedTime,
-          }),
-          headers: { "Content-Type": "application/json" },
-        }
-      );
-      setLoading2(false);
-      const data = await res.json();
-      if (data.errortoken) {
-        setValidUrl(false);
-      }
-      if (data.erroralreadychanged) {
-        setValidUrl2("dd");
-        setValidUrl(null);
-      }
+  //   try {
+  //     setLoading2(true);
+  //     const res = await fetch(
+  //       `https://server-portfolio-hb.onrender.com/confirmationchangerdv?token=${token}`,
+  //       {
+  //         method: "POST",
+  //         credentials: "include",
+  //         body: JSON.stringify({
+  //           date: formattedDate,
+  //           hour: selectedTime,
+  //         }),
+  //         headers: { "Content-Type": "application/json" },
+  //       }
+  //     );
+  //     setLoading2(false);
+  //     const data = await res.json();
+  //     if (data.errortoken) {
+  //       setValidUrl(false);
+  //     }
+  //     if (data.erroralreadychanged) {
+  //       setValidUrl2("dd");
+  //       setValidUrl(null);
+  //     }
 
-      if (data.rdvalreadychanged) {
-        setValidUrl2("dd");
-        setValidUrl(null);
-      }
-      if (data.rdvchanged) {
-        setValidUrl2("bb");
-        setValidUrl(null);
-      }
-    } catch (error) {
-      document.getElementById("der").textContent = error;
-      console.error("Erreur lors de la soumission du formulaire :", error);
-    }
-  }
+  //     if (data.rdvalreadychanged) {
+  //       setValidUrl2("dd");
+  //       setValidUrl(null);
+  //     }
+  //     if (data.rdvchanged) {
+  //       setValidUrl2("bb");
+  //       setValidUrl(null);
+  //     }
+  //   } catch (error) {
+  //     document.getElementById("der").textContent = error;
+  //     console.error("Erreur lors de la soumission du formulaire :", error);
+  //   }
+  // }
 
-  const handleDateChange = (option) => {
-    setSelectedDate(option);
+  // const handleDateChange = (option) => {
+  //   setSelectedDate(option);
 
-    const filteredTimes = appointments
-      .filter(
-        (appointment) =>
-          new Date(appointment.date).toLocaleDateString("fr-FR") ===
-          option.value
-      )
-      .map((appointment) => ({
-        value: appointment.time,
-        label: appointment.time,
-      }));
+  //   const filteredTimes = appointments
+  //     .filter(
+  //       (appointment) =>
+  //         new Date(appointment.date).toLocaleDateString("fr-FR") ===
+  //         option.value
+  //     )
+  //     .map((appointment) => ({
+  //       value: appointment.time,
+  //       label: appointment.time,
+  //     }));
 
-    setAvailableTimes(filteredTimes);
-    setSelectedTime(null); // Réinitialiser l'heure sélectionnée
-  };
+  //   setAvailableTimes(filteredTimes);
+  //   setSelectedTime(null); // Réinitialiser l'heure sélectionnée
+  // };
 
-  const uniqueDates = [
-    ...new Set(
-      appointments.map((appointment) => {
-        const date = new Date(appointment.date);
-        return date.toLocaleDateString("fr-FR"); // Format DD/MM/YYYY
-      })
-    ),
-  ].map((date) => ({ value: date, label: date }));
+  // const uniqueDates = [
+  //   ...new Set(
+  //     appointments.map((appointment) => {
+  //       const date = new Date(appointment.date);
+  //       return date.toLocaleDateString("fr-FR"); // Format DD/MM/YYYY
+  //     })
+  //   ),
+  // ].map((date) => ({ value: date, label: date }));
 
   return (
     <>
@@ -159,8 +159,8 @@ const EditRendezVous = () => {
             <Select
               className="selectdate"
               id="date-select"
-              options={uniqueDates}
-              onChange={handleDateChange}
+              // options={uniqueDates}
+              // onChange={handleDateChange}
               isDisabled={selectedDate !== null} // Désactiver si une date est sélectionnée
               styles={{
                 option: (provided, state) => ({
@@ -201,7 +201,7 @@ const EditRendezVous = () => {
                 }}
               />
               <p id="der" style={{color:"red"}}>-----</p>
-              <a onClick={handlechangerdv} className="true" id="spano">
+              {/* <a onClick={handlechangerdv} className="true" id="spano">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -219,7 +219,7 @@ const EditRendezVous = () => {
                 ) : (
                   t("submit")
                 )}
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -259,6 +259,17 @@ const EditRendezVous = () => {
             يرجى ملاحظة أنه يُسمح لك بتعديل موعدك مرة واحدة فقط
           </p>
         </div>
+      )}
+      {validUrl2 == "fin" && (
+       <div className="notification">
+       <p className="en">
+         Please approach the Entrepreneurship Development Center for new appointments.
+       </p>
+       <p className="ar">
+         لتحديد مواعيد جديدة يرجى التقرب من مركز تطوير المقاولاتية
+       </p>
+     </div>
+     
       )}
     </>
   );
